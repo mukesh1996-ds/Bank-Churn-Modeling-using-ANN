@@ -15,44 +15,61 @@ This project aims to predict customer churn in a bank using Artificial Neural Ne
 
 ## Workflow
 
-### 1. **Loading the Dataset**
-   - Import and load the dataset for analysis and model building.
+### Workflow Stages:
+1. **Loading the Dataset**  
+   Import and load the dataset for analysis and model building.
 
-### 2. **Feature Engineering**
-   - Handle categorical data (e.g., encoding).
-   - Fill or remove missing values.
-   - Scale numerical features for ANN compatibility.
+2. **Feature Engineering**  
+   - Handle categorical data (e.g., encoding).  
+   - Fill or remove missing values.  
+   - Scale numerical features for ANN compatibility.  
 
-### 3. **Building the ANN**
-   - Input Layer: Define the number of input neurons based on features.
-   - Hidden Layers: Use multiple layers with activation functions.
-   - Output Layer: Use sigmoid activation for binary classification.
-   - Apply forward and backward propagation.
+3. **Implementation of ANN**  
+   - Build a neural network with input, hidden, and output layers.  
+   - Apply forward and backward propagation.  
+   - Add dropout layers to avoid overfitting.  
 
-### 4. **Implementing Dropout**
-   - Add dropout layers to reduce overfitting by deactivating random neurons during training.
+4. **Model Training and Evaluation**  
+   - Train the model on the dataset using multiple epochs.  
+   - Evaluate model accuracy and tune hyperparameters.  
 
-### 5. **Model Saving**
-   - Save the trained model as a `.pickle` or `.h5` file for later use.
+5. **Model Saving**  
+   Save the trained model as a `.pickle` or `.h5` file for future use.  
 
-### 6. **Integration with Streamlit**
-   - Build an interactive web application using Streamlit to allow users to input customer data and view predictions.
-   - Deploy the application to Streamlit Cloud for public access.
+6. **Streamlit Integration**  
+   Build a Streamlit app for user interaction and deploy to Streamlit Cloud.
 
 ---
 
-## Flowchart
+### Workflow Flow Diagram
 
 ```mermaid
 graph TD
-    A[Loading Dataset] --> B[Feature Engineering]
-    B --> C[Building ANN]
-    C --> D[Forward & Backward Propagation]
-    D --> E[Dropout Implementation]
-    E --> F[Model Evaluation & Tuning]
-    F --> G[Model Saving]
-    G --> H[Streamlit Integration]
-    H --> I[Deploy to Streamlit Cloud]
+    A[Load Dataset] --> B[Feature Engineering]
+    B --> C[Build ANN Model]
+    C --> D[Train and Evaluate Model]
+    D --> E[Save Model]
+    E --> F[Build Streamlit App]
+    F --> G[Deploy to Streamlit Cloud]
+```
+
+---
+
+## Implementation of ANN
+
+### Definition
+An Artificial Neural Network (ANN) is a computing system inspired by the human brain, consisting of layers of interconnected nodes (neurons). It processes data by applying transformations through layers to predict outputs.
+
+### Neural Network Flow Diagram
+```mermaid
+graph LR
+    A[Input Features] --> B[Input Layer]
+    B --> C[Hidden Layer 1 (ReLU)]
+    C --> D[Dropout Layer]
+    D --> E[Hidden Layer 2 (ReLU)]
+    E --> F[Dropout Layer]
+    F --> G[Output Layer (Sigmoid)]
+    G --> H[Predicted Output]
 ```
 
 ---
@@ -83,4 +100,3 @@ graph TD
    streamlit run app.py
    ```
 
----
