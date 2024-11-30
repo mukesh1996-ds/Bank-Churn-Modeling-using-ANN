@@ -64,11 +64,11 @@ An Artificial Neural Network (ANN) is a computing system inspired by the human b
 ```mermaid
 graph LR
     A[Input Features] --> B[Input Layer]
-    B --> C[Hidden Layer 1 (ReLU)]
+    B --> C[Hidden Layer 1 with ReLU Activation]
     C --> D[Dropout Layer]
-    D --> E[Hidden Layer 2 (ReLU)]
+    D --> E[Hidden Layer 2 with ReLU Activation]
     E --> F[Dropout Layer]
-    F --> G[Output Layer (Sigmoid)]
+    F --> G[Output Layer with Sigmoid Activation]
     G --> H[Predicted Output]
 ```
 
